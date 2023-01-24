@@ -1,1 +1,16 @@
-
+"ls" - to look at your surroundings
+"cd LOCATION" - Move to a new location
+"cd .." - to backtrack
+"less ITEM" - Interact with things in the world
+"pwd" - figure out where you are
+"cd ~" - go directly Home (start of the game)
+"cd" - go directly Home (start of the game)
+"mv" - move things in the world (format: mv OBJECT NEWLOCATION)
+"help" - list available spells
+"man" - see details on how to use a specific spell (format: man SPELL)
+"rm" - makes an item or person disappear from this place (format: rm ITEM/PERSON)
+"mkdir" - create a new place that never existed before (format: mkdir NAME)
+"Sudo" - conveys complete mastery over the elements (allow to perform any action on item)
+"grep" - search contents of a book
+"touch" - create a new item
+'cp' - copy an item from this room to another room you came from (
