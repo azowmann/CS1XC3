@@ -6,6 +6,7 @@
 "cd ~" - go directly Home (start of the game)
 "cd" - go directly Home (start of the game)
 "mv" - move things in the world (format: mv OBJECT NEWLOCATION)
+"exit" - terminates the script and exits the shell
 "help" - list available spells
 "man" - see details on how to use a specific spell (format: man SPELL)
 "rm" - makes an item or person disappear from this place (format: rm ITEM/PERSON)
