@@ -1,17 +1,25 @@
-"ls" - to look at your surroundings
+4.1 Find all the commands
+
+"ls" - to look at your surroundings, lists files and directories within a system
 "cd LOCATION" - Move to a new location
 "cd .." - to backtrack
 "less ITEM" - Interact with things in the world
-"pwd" - figure out where you are
+"pwd" - figure out where you are, find path of current working directory
 "cd ~" - go directly Home (start of the game)
 "cd" - go directly Home (start of the game)
-"mv" - move things in the world (format: mv OBJECT NEWLOCATION)
+"mv" - move things in the world (format: mv OBJECT NEWLOCATION), move and rename files and directories
 "exit" - terminates the script and exits the shell
 "help" - list available spells
 "man" - see details on how to use a specific spell (format: man SPELL)
-"rm" - makes an item or person disappear from this place (format: rm ITEM/PERSON)
-"mkdir" - create a new place that never existed before (format: mkdir NAME)
-"Sudo" - conveys complete mastery over the elements (allow to perform any action on item)
+"rm" - makes an item or person disappear from this place (format: rm ITEM/PERSON), delete files in a directory
+"mkdir" - create a new place that never existed before (format: mkdir NAME), create a directory and set permissions for it
+"Sudo" - conveys complete mastery over the elements (allow to perform any action on item), grants adminstrative permissions
 "grep" - search contents of a book
 "touch" - create a new item
-'cp' - copy an item from this room to another room you came from (
+'cp' - copy an item from this room to another room you came from, copy files and directories and their content
+
+4.3 Trivia Time
+
+The difference between Linux and Windows is that Linux is an open source operating system which means that it allows
+users to access the source code (you cannot do this in Windows). Linux is also more efficient than Windows. However, 
+Windows I'd say is easier to use. 
