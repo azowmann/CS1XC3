@@ -23,3 +23,5 @@
 The difference between Linux and Windows is that Linux is an open source operating system which means that it allows
 users to access the source code (you cannot do this in Windows). Linux is also more efficient than Windows. However, 
 Windows I'd say is easier to use. 
+
+I saw 3 sign boards on my way to Paradise.
