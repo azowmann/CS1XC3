@@ -13,7 +13,7 @@
 "man" - see details on how to use a specific spell (format: man SPELL)
 "rm" - makes an item or person disappear from this place (format: rm ITEM/PERSON), delete files in a directory
 "mkdir" - create a new place that never existed before (format: mkdir NAME), create a directory and set permissions for it
-"Sudo" - conveys complete mastery over the elements (allow to perform any action on item), grants adminstrative permissions
+"sudo" - conveys complete mastery over the elements (allow to perform any action on item), grants adminstrative permissions
 "grep" - search contents of a book
 "touch" - create a new item
 'cp' - copy an item from this room to another room you came from, copy files and directories and their content
