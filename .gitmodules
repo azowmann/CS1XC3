@@ -1,0 +1,6 @@
+[submodule "L03/L03"]
+	path = L03/L03
+	url = https://github.com/1XC3/L03.git
+[submodule "1XC3_L03"]
+	path = 1XC3_L03
+	url = git@github.com:azowmann/1XC3_L03.git
