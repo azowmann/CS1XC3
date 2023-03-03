@@ -1,0 +1,16 @@
+Search Value,		Linear Search(kbytes),		Binary Search (kbytes),		Fibonacci Sequence (kbytes)		Notes
+1,			2244,			        2296,			        2304,					Allocated memory is different as linear search requires least memory likely because there are less calculations and stores less variables during the process compared to binary and fibonacci algorithms			
+4,			2124,				2224,				2260,					Allocated memory is different but relatively similar. Fibonacci has one of the lowest time complexities but linear search takes least space.
+22,			2204,				2248,				2124,					Allocated memory is different in this case for similar reasons. Binary search has a fast runtime but fibonacci search takes least memory.
+37,			2240,				2228,				2260,					Allocated memory is different in this case for similar reasons. Binary search has least memory.
+22906,			2248,				2212,				2256,					Allocated memory is different in this case for similar reasons. Binary search has least memory while they all have similar runtime.
+53757,			2260,				2212,				2232,					Allocated memory is different in this case for similar reasons. Binary has least memory usage.	
+112591,			2216,				2252,				2204,					Allocated memory is different in this case for similar reasons. Fibonacci has least memory and they all have same runtime.  
+361940,			2124,				2204,				2260,					Allocated memory is different in this case for similar reasons. However, linear uses least memory but binary has fastest runtime.
+475713,			2128,				2256,				2208,					Allocated memory is different in this case for similar reasons. Linear takes least space while fibonacci takes least time.
+893766,			2256,				2256,				2224,					Allocated memory is different in this case for similar reasons. Fibonacci has least memory while they take the same time to run. 
+996637,			2220,				2304,				2248,					Allocated memory is different in this case for similar reasons. Linear search has least memory but fibonacci has fastest runtime 
+996639,			2224,				2304,				2304,					Allocated memory is different in this case for similar reasons. Linear search takes least memory. 
+996652,			2196,				2240,				2228,					Allocated memory is different in this case
+-996652,		2228,				2236,				2224,					Allocated memory is different in this case for similar reasons. However fibonacci sequence has the least memory when i expected it to be linear as the element is not in the array.
+

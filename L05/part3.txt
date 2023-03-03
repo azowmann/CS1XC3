@@ -1,0 +1,13 @@
+All the reported times are zero because the program runs so fast that theres no oopportunity for the numbers to get recorded.
+
+
+factors_itr is only called once every time the program is run because it only runs once for each number in the data set. It is also not recursive.
+
+the relationship is that the number of recursive calls is equal to the number of prime factors each number produces. In addition, the number of prime factors produced is equal to the number of times the number can be divided by 2.
+
+
+
+
+
+
+

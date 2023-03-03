@@ -1,0 +1,7 @@
+a) The iterative and recursive algorithms are similar for the same test cases as they have the same purpose of calculating factors. They also have same time complexity of O(n). They are different as the recursive method will take more space than the iterative. THe recursive method has more repetition. The iterative only uses the main loop.
+
+b) The most excecuted line in the iterative algorithm is the main for loop. The most excecuted line in the recursive algorithm is the if statement (the recursive call). They are not the same. 
+
+c) The printArray function is not exercised.
+
+d) If we were trying to optimize either function, removing any unnecessary code would be a good place to start.	 
