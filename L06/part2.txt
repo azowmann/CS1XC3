@@ -1,0 +1,109 @@
+# /etc/profile
+
+# System wide environment and startup programs, for login setup
+# Functions and aliases go in /etc/bashrc
+
+# It's NOT a good idea to change this file unless you know what you
+# are doing. It's much better to create a custom.sh shell script in
+# /etc/profile.d/ to make custom changes to your environment, as this
+# will prevent the need for merging in future updates.
+
+pathmunge () {
+    case ":${PATH}:" in
+        *:"$1":*)
+            ;;
+        *)
+            if [ "$2" = "after" ] ; then
+                PATH=$PATH:$1
+            else
+                PATH=$1:$PATH
+            fi
+    esac
+}
+
+
+if [ -x /usr/bin/id ]; then
+    if [ -z "$EUID" ]; then
+        # ksh workaround
+        EUID=`/usr/bin/id -u`
+        UID=`/usr/bin/id -ru`
+    fi
+    USER="`/usr/bin/id -un`"
+    LOGNAME=$USER
+    MAIL="/var/spool/mail/$USER"
+fi
+
+# Path manipulation
+if [ "$EUID" = "0" ]; then
+    pathmunge /usr/sbin
+    pathmunge /usr/local/sbin
+else
+    pathmunge /usr/local/sbin after
+    pathmunge /usr/sbin after
+fi
+
+HOSTNAME=`/usr/bin/hostname 2>/dev/null`
+HISTSIZE=1000
+if [ "$HISTCONTROL" = "ignorespace" ] ; then
+    export HISTCONTROL=ignoreboth
+else
+    export HISTCONTROL=ignoredups
+fi
+
+export PATH USER LOGNAME MAIL HOSTNAME HISTSIZE HISTCONTROL
+
+# By default, we want umask to get set. This sets it for login shell
+# Current threshold for system reserved uid/gids is 200
+# You could check uidgid reservation validity in
+# /usr/share/doc/setup-*/uidgid file
+if [ $UID -gt 199 ] && [ "`/usr/bin/id -gn`" = "`/usr/bin/id -un`" ]; then
+    umask 002
+else
+    umask 022
+fi
+
+for i in /etc/profile.d/*.sh /etc/profile.d/sh.local ; do
+    if [ -r "$i" ]; then
+        if [ "${-#*i}" != "$-" ]; then 
+            . "$i"
+        else
+            . "$i" >/dev/null
+        fi
+    fi
+done
+
+unset i
+unset -f pathmunge
+
+if [ -n "${BASH_VERSION-}" ] ; then
+        if [ -f /etc/bashrc ] ; then
+                # Bash login shells run only /etc/profile
+                # Bash non-login shells run only /etc/bashrc
+                # Check for double sourcing is done in /etc/bashrc.
+                . /etc/bashrc
+       fi
+fi
+------
+
+ 14:09:09 up 82 days,  5:16, 20 users,  load average: 0.08, 0.04, 0.00
+USER     TTY      FROM             LOGIN@   IDLE   JCPU   PCPU WHAT
+mohaa143 pts/44   172.18.17.196    12:27    6:29   0.21s  0.21s -bash
+seton2   pts/13   172.18.35.218    13:29   31:49   0.08s  0.08s -bash
+joshim20 pts/10   172.18.45.214    04:53    8:47m  0.15s  0.15s -bash
+ansars23 pts/71   172.17.243.193   14:06    1:25   0.08s  0.08s -bash
+kaura69  pts/88   172.17.66.221    12:49    1:01m  0.18s  0.18s -bash
+pohlj    pts/103  172.17.117.90    14:02    5.00s  0.16s  0.09s nano /home/pohlj/.bashrc
+moonemal pts/352  172.17.92.129    11:42    2:08m  0.14s  0.14s -bash
+zhouz229 pts/368  172.17.91.60     11:29    2:05m  0.12s  0.12s -bash
+xxxxh    pts/377  172.17.92.9      11:30    1:52m  0.30s  0.30s -bash
+kaura69  pts/401  172.17.66.221    13:10   48:19   0.10s  0.10s -bash
+maliks54 pts/293  172.18.203.10    13:41    5.00s  0.60s  0.60s -bash
+sorokinn pts/404  172.17.92.212    11:34    2:06m  0.13s  0.13s -bash
+guow42   pts/432  172.26.205.128   14:04    4:21   0.07s  0.07s -bash
+kaura69  pts/452  172.17.90.44     11:41    1:47m  0.28s  0.28s -bash
+zhengz13 pts/372  172.17.94.145    11:30    1:52m  0.29s  0.29s -bash
+gogoia   pts/392  172.18.201.110   13:08   37.00s  0.13s  0.06s nano profile
+zhoua39  pts/431  172.17.71.55     13:52    4.00s  0.17s  0.06s w
+zhu37    pts/378  172.18.201.224   12:47    1:17m  0.11s  0.11s -bash
+zhu37    pts/393  172.18.201.224   12:50    1:11m  0.15s  0.15s -bash
+yashikay pts/481  172.18.204.250   12:03    1:52   0.43s  0.12s vim .bashrc
