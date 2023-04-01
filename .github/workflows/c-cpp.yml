@@ -13,11 +13,14 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    - name: configure
-      run: ./configure
+    - name: Install doxygen
+      run: |
+        sudo apt-get install doxygen
     - name: make
-      run: make
-    - name: make check
-      run: make check
-    - name: make distcheck
-      run: make distcheck
+      run: |
+        cd Lab09
+        make
+    - name: make clean
+      run: |
+        cd Lab09
+        make clean
