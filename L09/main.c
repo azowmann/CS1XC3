@@ -1,3 +1,12 @@
+/**
+ * @file main.c
+ * @author Alan
+ * @date March31
+ * @brief outputs basic information about courses and students
+ */
+
+
+
 
 #include <stdlib.h> 
 #include <stdio.h>

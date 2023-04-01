@@ -1,3 +1,17 @@
+/**
+ * \brief A brief description
+ *
+ * contains struct for student and functions to be used	
+ *
+ */
+
+/**
+ * @file student.h
+ * @author Alan
+ * @date March31
+ * @brief contains struct for student and functions to be used
+ */
+
  
 typedef struct _student 
 { 

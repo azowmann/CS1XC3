@@ -1,3 +1,21 @@
+
+/**
+ * \brief A brief description
+ *
+ * contains course struct and functions to be used
+ */
+
+
+
+/**
+ * @file course.h
+ * @author Alan
+ * @date March31
+ * @brief struct and functions
+ */
+
+
+
 #include "student.h"
 #include <stdbool.h>
  

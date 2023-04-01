@@ -1,3 +1,11 @@
+/**
+ * @file course.c
+ * @author Alan
+ * @date March31
+ * @brief to enroll student and top student
+ */
+
+
 #include "course.h"
 #include <stdlib.h>
 #include <stdio.h>

@@ -1,3 +1,11 @@
+/**
+ * @file student.c
+ * @author Alan
+ * @date March31
+ * @brief functions to add grades and calculate average and return student information
+ */
+
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
