@@ -1,0 +1,25 @@
+L1: abc
+L1 1/2: 123
+L2: ...\.
+L3: [cmf]an
+L4: [hd]og
+L5: [A-C][n-p][a-c]
+L6: waz{3,5}up
+L7: a{2,4}b{0,4}c{1,2}
+L8: \d+ files? found\?
+L9: \d\.\s+abc
+L10: ^Mission: successful$
+L11: ^(file.+)\.pdf$
+L12: (\w+ (\d+))
+L13: (\d+)x(\d+)
+L14: I love (cats|dogs)
+L15: .*
+
+P1: ^-?\d+(,\d+)*(\.\d+(e\d+)?)?$
+P2: 1?[\s-]?\(?(\d{3})\)?[\s-]?\d{3}[\s-]?\d{4}
+P3: ^([\w\.]*)
+P4: <(\w+)
+P5: (\w+)\.(jpg|png|gif)$
+P6: ^\s*(.*)\s*$
+P7: (\w+)\(([\w\.]+):(\d+)\)
+P8: (\w+)://([\w\-\.]+)(:(\d+))?

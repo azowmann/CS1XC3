@@ -1,0 +1,11 @@
+1. find /path/to/archive -type f -name '*.tex' -exec grep -Hn '\\includegraphics' {} +
+2. find . -type f -name "*.tex" -exec grep -nE '^[[:space:]]*\\begin\{[^{}]+[^{]*\}.*$' {} \;
+3. find /path/to/directory -type f -exec grep -wHn 'arbitrary\|bitwidth\|pointer' {} \;
+4. grep -Ern --include='*.tex' '([[:space:]|^])([Aa]m|[Aa]re|[Ii]s|[Ww]as|[Ww]ere|[Ww]ill[[:space:]]be|[Hh]ave[[:space:]]been|[Hh]ad[[:space:]]been|[Ww]ill[[:space:]]have[[:space:]]been)([[:space:]]|$)' /path/to/directory/*S*.tex
+5. pcregrep -rM --include='*.tex' '\\begin{itemize}\n\s*\\item' /path/to/directory/
+6. grep -rEI --include='*.{txt, tex}' '\bpointer\b\s*([{}a-zA-Z]*\s*)?[RSTLNErstlne][a-zA-Z]*' /path/to/directory/
+7. grep -rEI --include='*.{txt, tex}' '(\s|^)[a-zA-Z]*[aeiouAEIOU]{2}[a-zA-Z]*(\s|$)' /path/to/directory/
+8. grep -rE --include='*.{c, h}' '\bif\s*\(' /path/to/directory/
+9. grep -rnE --include='*.c' '^(int|void|float|char)(\s*\*+\s*\w+\s*,?)*\s*\(' /path/to/directory/
+10. grep -Eo '[0-9]+([+\-/*][0-9]+)+' *.txt *.tex
+

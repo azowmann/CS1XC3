@@ -1,0 +1,16 @@
+1. find . -name "*.tex"
+2. find /path/to/directory -name "*.tex" ! -name "template.tex"
+3. find . -name "*.tex" -exec wc -l {} \;
+4. find . \( -name "*.tex" -o -name "*.pdf" -o -name "*.toc" \)
+5. find . -name "topic[7-9]*.pdf" -o -name "topic[1-9][0-9]*.pdf"
+6. find . -name "*~" -type f -delete
+7. find . -name "#*#" -type f -delete
+8. find . -type f \( -name "*.png" -o -name "*.jpg" -o -name "*.bmp" -o -name "*.webp" \) -printf "%f\n" | grep -E '^.{10}$' > goodFiles.txt
+9. find . -name "*.log" -type f -exec cat {} \; >> allTheLogs.log
+10. find . -name "*C*.aux" -type f -exec sed -n '10p' {} \;
+11, find . -name "*.sh" -type f -exec chmod +x {} \;
+12. find . -name "* and *.txt" -type f -exec sh -c 'echo "==> {}" >> allheads.txt; head -n 10 "{}" >> allheads.txt; echo "" >> allheads.txt' \;
+13. find . -type f \( -iname "*.png" -o -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.webp" \) -exec cp {} image_backup/ \;
+14. cat filenames.txt
+15. cat allTheGlobs.txt | xargs -I {} find . -type f -name "{}" -print 2>/dev/null | grep -v '^./allTheGlobs.txt$'
+
